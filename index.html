@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Google Navigator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Luanven Logo.png" type="image/x-icon">
+    <!-- Google Fonts for sleek futuristic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-neon">
+        <!-- Live Clock & Date -->
+        <div class="clock-container">
+            <div id="clock">00:00:00</div>
+            <div id="date">Segunda-feira, 01 de Janeiro</div>
+        </div>
+
+        <h1 id="title">Hello <strong id="Username">User!</strong>, Welcome To <span id="G">G</span><span id="o1">o</span><span id="o2">o</span><span id="g">g</span><span id="l">l</span><span id="e">e</span></h1>
+        <h2 id="subtitle">This is your custom navigator</h2>
+        
+        <!-- Search Bar Section -->
+        <div class="search-container">
+            <form id="search-form" onsubmit="performSearch(event)">
+                <select id="search-engine" title="Mecanismo de Pesquisa">
+                    <option value="google">Google</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="bing">Bing</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Pesquisar na web ou digitar uma URL..." autocomplete="off">
+                <button type="submit" id="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    Buscar
+                </button>
+            </form>
+        </div>
+
+        <p id="ByLuanven1">
+            Feito por: <strong id="Creator">By Luanven1</strong>
+        </p>
+    </header>
+
+    <main class="main-content">
+        <!-- NAVIGATORS -->
+        <section class="section-container">
+            <h1 class="title-links">Navigators</h1>
+            <div class="backgroundNavigators grid-container">
+                <div class="links neon-white-card" id="CursoEmVideoYT">
+                    <a href="https://youtube.com/@cursoemvideo" target="_blank" class="link-acess" id="CursoEmVideoYT-acess">Curso Em Video YT</a>
+                </div>
+                <div class="links neon-white-card" id="MozillaMDN">
+                    <a href="https://developer.mozilla.org/" class="link-acess" id="MozillaMDNacess" target="_blank">Mozilla MDN</a>
+                </div>
+                <div class="links neon-white-card" id="GoogleChrome">
+                    <a href="https://google.com" class="link-acess" id="GoogleChromeacess" target="_blank">Google</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTIFICIAL INTELLIGENCE -->
+        <section class="section-container">
+            <h1 class="title-links">Artificial Intelligence (AI)</h1>
+            <div class="backgroundNavigators grid-container" id="AIbackground">
+                <div class="links neon-white-card" id="ChatGPT">
+                    <a href="https://chatgpt.com" class="link-acess" id="ChatGPT-acess" target="_blank">ChatGPT</a>
+                </div>
+                <div class="links neon-white-card" id="Gemini">
+                    <a href="https://gemini.google.com" class="link-acess" id="Geminiacess" target="_blank">Gemini By Google</a>
+                </div>
+                <div class="links neon-white-card" id="ClaudeAI">
+                    <a href="https://claude.com" class="link-acess" id="ClaudeAIacess" target="_blank">Claude AI</a>
+                </div>
+                <div class="links neon-white-card" id="PerplexityAI">
+                    <a href="https://perplexity.com" class="link-acess" id="PerplexityAIacess" target="_blank">Perplexity AI</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO EDITOR -->
+        <section class="section-container">
+            <h1 class="title-links">Photo Editor</h1>
+            <div class="backgroundNavigators grid-container" id="Editorbackground">
+                <div class="links neon-white-card" id="Canva">
+                    <a href="https://canva.com" class="link-acess" id="Canvaacess" target="_blank">Canva</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGLISH LESSONS -->
+        <section class="section-container">
+            <h1 class="title-links">English Lessons</h1>
+            <div class="backgroundNavigators grid-container" id="iframe-lessons">
+                <div class="links neon-white-card" id="Duolingo">
+                    <a href="https://duolingo.com" class="link-acess" id="Duolingoacess" target="_blank">Duolingo</a>
+                </div>
+                <div class="links neon-white-card" id="Memrise">
+                    <a href="https://app.memrise.com/dashboard" class="link-acess" id="Memriseacess" target="_blank">Memrise</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DYNAMIC CUSTOM LINKS SECTION -->
+        <section class="section-container" id="custom-links-section">
+            <h1 class="title-links">Meus Links Personalizados</h1>
+            <div class="backgroundNavigators grid-container" id="customLinksContainer">
+                <!-- Custom links added by user appear here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <details>
+            <summary>⚙️ Configurações & Personalização</summary>
+            
+            <div class="settings-content">
+                <!-- Theme Mode -->
+                <div class="setting-item">
+                    <h3>Modo de Cor do Fundo</h3>
+                    <div class="button-group">
+                        <button id="buttonMode" onclick="setTheme('black')">Preto Puro Neon</button>
+                        <button class="theme-btn" onclick="setTheme('cyber')">Cyber Dark Blue</button>
+                        <button class="theme-btn" onclick="setTheme('deep-purple')">Roxo Noturno</button>
+                    </div>
+                    <p id="paragraph">O fundo atual do site é ajustável com estilo Neon Branco!</p>
+                </div>
+
+                <!-- Username Setting -->
+                <div class="setting-item">
+                    <h3>Nome do Usuário</h3>
+                    <div class="input-group">
+                        <input type="text" id="newUsernameInput" placeholder="Digite seu novo nome...">
+                        <button onclick="changeUsername()">Salvar Nome</button>
+                    </div>
+                </div>
+
+                <!-- Add Custom Link Form -->
+                <div class="setting-item">
+                    <h3>Adicionar Novo Link Atalho</h3>
+                    <form id="add-link-form" onsubmit="addCustomLink(event)">
+                        <div class="form-grid">
+                            <input type="text" id="linkTitle" placeholder="Nome do Site (Ex: YouTube)" required>
+                            <input type="url" id="linkUrl" placeholder="URL do Site (https://...)" required>
+                            <select id="linkColor">
+                                <option value="linear-gradient(135deg, #1e1e38, #000000)">Escuro Standard</option>
+                                <option value="linear-gradient(135deg, #e65c00, #F9D423)">Sunset Orange</option>
+                                <option value="linear-gradient(135deg, #00b09b, #96c93d)">Emerald Neon</option>
+                                <option value="linear-gradient(135deg, #8A2387, #E94057, #F27121)">Purple Horizon</option>
+                                <option value="linear-gradient(135deg, #00c6ff, #0072ff)">Electric Blue</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-add">+ Adicionar Link</button>
+                    </form>
+                </div>
+
+                <!-- Manage Links -->
+                <div class="setting-item">
+                    <h3>Gerenciar Links Personalizados</h3>
+                    <button onclick="clearCustomLinks()" class="btn-danger">Limpar Meus Links Criados</button>
+                </div>
+            </div>
+        </details>
+
+        <p id="creator">&copy; By Luan Venancio <br>
+        &copy; By Gemini Google</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
